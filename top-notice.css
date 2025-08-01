@@ -1,0 +1,34 @@
+#top-notice{
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 3px 0;
+    background-color: var(--clr-a);
+    color: #000;
+    font-size: 1em;
+    z-index: 1000; /* Ensure it stays on top */
+    overflow-x: scroll;
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    -webkit-overflow-scrolling: touch;
+}
+#top-notice p {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    /* transform: translateX(100%); */
+    animation: top-notice-scroll 10s linear infinite;
+}
+#top-notice:hover p {
+    animation-play-state: paused;
+}
+#top-notice span {
+    margin: 0 20px 0 5px;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+@keyframes top-notice-scroll {
+    to {
+        transform: translateX(calc(-50%));
+    }
+}
