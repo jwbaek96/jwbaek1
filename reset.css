@@ -36,3 +36,4 @@ html,body{
     position: relative;
     /* overflow: scroll; */
 }
+html,body, label{cursor: none;}

@@ -7,7 +7,7 @@
     background-color: var(--clr-a);
     color: #000;
     font-size: 1em;
-    z-index: 1000; /* Ensure it stays on top */
+    z-index: 99; /* Ensure it stays on top */
     overflow-x: scroll;
     scrollbar-width: none; /* Hide scrollbar in Firefox */
     -webkit-overflow-scrolling: touch;
