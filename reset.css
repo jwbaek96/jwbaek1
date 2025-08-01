@@ -14,7 +14,7 @@
 a, a:visited, a:link, a:active {
 	color: #333;
 	text-decoration: none;
-    cursor: pointer;
+    cursor: none;
 }
 ul, ol, dl, menu, dir, li, dt, dd {
     list-style: none;
