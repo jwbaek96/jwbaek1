@@ -50,16 +50,40 @@ header{
 #nav1-2:checked ~ .nav1-2{display: block;}
 #nav1-3:checked ~ .nav1-3{display: block;}
 #nav1-4:checked ~ .nav1-4{display: block;}  
-#nav1-1:checked ~ .nav1 label[for="nav1-1"] li {background-color: var(--clr-a);}
-#nav1-2:checked ~ .nav1 label[for="nav1-2"] li {background-color: var(--clr-a);}
-#nav1-3:checked ~ .nav1 label[for="nav1-3"] li {background-color: var(--clr-a);}
-#nav1-4:checked ~ .nav1 label[for="nav1-4"] li {background-color: var(--clr-a);}
+#nav1-1:checked ~ .nav1 label[for="nav1-1"] p {background-color: var(--clr-a);}
+#nav1-2:checked ~ .nav1 label[for="nav1-2"] p {background-color: var(--clr-a);}
+#nav1-3:checked ~ .nav1 label[for="nav1-3"] p {background-color: var(--clr-a);}
+#nav1-4:checked ~ .nav1 label[for="nav1-4"] p {background-color: var(--clr-a);}
 
-#nav1-1-1:checked ~ .nav2 label[for="nav1-1-1"] li {background-color: var(--clr-a);}
-#nav1-1-2:checked ~ .nav2 label[for="nav1-1-2"] li {background-color: var(--clr-a);}
-#nav1-1-3:checked ~ .nav2 label[for="nav1-1-3"] li {background-color: var(--clr-a);}
-#nav1-1-4:checked ~ .nav2 label[for="nav1-1-4"] li {background-color: var(--clr-a);}
-#nav1-1-5:checked ~ .nav2 label[for="nav1-1-5"] li {background-color: var(--clr-a);}
+#nav1-1-1:checked ~ .nav2 label[for="nav1-1-1"] p {background-color: var(--clr-a);}
+#nav1-1-2:checked ~ .nav2 label[for="nav1-1-2"] p {background-color: var(--clr-a);}
+#nav1-1-3:checked ~ .nav2 label[for="nav1-1-3"] p {background-color: var(--clr-a);}
+#nav1-1-4:checked ~ .nav2 label[for="nav1-1-4"] p {background-color: var(--clr-a);}
+#nav1-1-5:checked ~ .nav2 label[for="nav1-1-5"] p {background-color: var(--clr-a);}
+
+#nav1-2-1:checked ~ .nav2 label[for="nav1-2-1"] p {background-color: var(--clr-a);}
+#nav1-2-2:checked ~ .nav2 label[for="nav1-2-2"] p {background-color: var(--clr-a);}
+#nav1-2-3:checked ~ .nav2 label[for="nav1-2-3"] p {background-color: var(--clr-a);}
+#nav1-2-4:checked ~ .nav2 label[for="nav1-2-4"] p {background-color: var(--clr-a);}
+#nav1-2-5:checked ~ .nav2 label[for="nav1-2-5"] p {background-color: var(--clr-a);}
+
+#nav1-3-1:checked ~ .nav2 label[for="nav1-3-1"] p {background-color: var(--clr-a);}
+#nav1-3-2:checked ~ .nav2 label[for="nav1-3-2"] p {background-color: var(--clr-a);}
+#nav1-3-3:checked ~ .nav2 label[for="nav1-3-3"] p {background-color: var(--clr-a);}
+#nav1-3-4:checked ~ .nav2 label[for="nav1-3-4"] p {background-color: var(--clr-a);}
+#nav1-3-5:checked ~ .nav2 label[for="nav1-3-5"] p {background-color: var(--clr-a);}
+
+#nav1-4-1:checked ~ .nav2 label[for="nav1-4-1"] p {background-color: var(--clr-a);}
+#nav1-4-2:checked ~ .nav2 label[for="nav1-4-2"] p {background-color: var(--clr-a);}
+#nav1-4-3:checked ~ .nav2 label[for="nav1-4-3"] p {background-color: var(--clr-a);}
+#nav1-4-4:checked ~ .nav2 label[for="nav1-4-4"] p {background-color: var(--clr-a);}
+#nav1-4-5:checked ~ .nav2 label[for="nav1-4-5"] p {background-color: var(--clr-a);}
+
+#nav1-5-1:checked ~ .nav2 label[for="nav1-5-1"] p {background-color: var(--clr-a);}
+#nav1-5-2:checked ~ .nav2 label[for="nav1-5-2"] p {background-color: var(--clr-a);}
+#nav1-5-3:checked ~ .nav2 label[for="nav1-5-3"] p {background-color: var(--clr-a);}
+#nav1-5-4:checked ~ .nav2 label[for="nav1-5-4"] p {background-color: var(--clr-a);}
+#nav1-5-5:checked ~ .nav2 label[for="nav1-5-5"] p {background-color: var(--clr-a);}
 
 
 
