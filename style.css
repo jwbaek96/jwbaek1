@@ -49,13 +49,12 @@ header h1 span{
     width: 100%;
     z-index: -1;
 
-    /* transform: translateY(0%); */
 }
 .breadcrumb[data-state="open"] {
     transform: translateY(100%);
 }
 .breadcrumb[data-state="closed"] {
-    transform: translateY(0%);
+    transform: translateY(-100%);
 }
 .breadcrumb .arrowtoggle {
     position: absolute;

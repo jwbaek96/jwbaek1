@@ -21,40 +21,39 @@ window.addEventListener('mousemove',(e)=>{
 });
 
 // 진짜 타이핑 효과 JS 예시
-window.addEventListener('DOMContentLoaded', function() {
-  // .cursortext 요소를 가져옴
+// 타이핑 효과를 외부에서 재시작할 수 있도록 함수로 분리
+function setCursorText(text, speed = 50, delay = 500) {
   const el = document.querySelector('.cursortext');
   if (!el) return;
-  // 타이핑될 텍스트
-  const text = 'Welcome to the Records of Mine.😊\nMy name is Jongwhoun Baek.\nI\'m a web developer, ppt designer, media artist and musician.\nIf you want to contact me, send an email to jwbaek96@gmail.com\nor DM me on Instagram. My IG is @jw.baek.96';
-  // 현재까지 출력된 글자 인덱스
   let i = 0;
-  // 커서 깜빡임 상태
   let cursorVisible = true;
+  if (window.cursorTextTimer) clearTimeout(window.cursorTextTimer);
+  if (window.cursorBlinkTimer) clearTimeout(window.cursorBlinkTimer);
 
-  // 한 글자씩 타이핑하는 함수
   function type() {
     if (i <= text.length) {
-      // 현재까지의 글자와 커서(|)를 표시, \n을 <br>로 변환하여 줄바꿈
       el.innerHTML = text.slice(0, i).replace(/\n/g, '<br>') + (cursorVisible ? '|' : '');
       i++;
-      // 다음 글자 출력 속도
-      setTimeout(type, 50);
+      window.cursorTextTimer = setTimeout(type, speed);
     } else {
-      // 모든 글자가 출력되면 커서만 깜빡임
       blinkCursor();
     }
   }
 
-  // 커서(|)만 깜빡이는 함수
   function blinkCursor() {
     cursorVisible = !cursorVisible;
     el.innerHTML = text.replace(/\n/g, '<br>') + (cursorVisible ? '|' : '');
-    // 500ms마다 커서 상태 변경
-    setTimeout(blinkCursor, 500);
+    window.cursorBlinkTimer = setTimeout(blinkCursor, 500);
   }
 
-  // 초기화: 텍스트 비우고 타이핑 시작
   el.textContent = '';
-  setTimeout(type, 500); //딜레이 후 타이핑 시작
+  window.cursorTextTimer = setTimeout(type, delay);
+}
+
+window.addEventListener('DOMContentLoaded', function() {
+  fetch('temps/mousefollow.json')
+    .then(res => res.json())
+    .then(cfg => {
+      setCursorText(cfg.text || '', cfg.speed, cfg.delay);
+    });
 });

@@ -2,9 +2,12 @@ window.addEventListener('DOMContentLoaded', function() {
     const navContainer = document.getElementById('nav');
     if (!navContainer) return;
 
-    fetch('./nav.json')
+    fetch('temps/nav.json')
     .then(response => response.json())
     .then(navData => {
+        // blog 등 하위 메뉴 없는 경우 mousetext 적용
+        const cursortext = document.querySelector('.cursortext');
+        
         // nav1 생성
         const nav1 = document.createElement('ul');
         nav1.className = 'nav1';
@@ -27,6 +30,10 @@ window.addEventListener('DOMContentLoaded', function() {
                 document.querySelectorAll('.nav2 .nav-items').forEach(el => {
                     el.classList.remove('nav-item-active');
                 });
+                // mousetext 적용 (타이핑 효과)
+                if (item.mousetext && typeof setCursorText === 'function') {
+                    setCursorText(item.mousetext);
+                }
             });
             nav1.appendChild(p);
         });
@@ -50,6 +57,10 @@ window.addEventListener('DOMContentLoaded', function() {
                         el.classList.remove('nav-item-active');
                     });
                     p.classList.add('nav-item-active');
+                    // mousetext 적용 (타이핑 효과)
+                    if (child.mousetext && typeof setCursorText === 'function') {
+                        setCursorText(child.mousetext);
+                    }
                 });
                 nav2.appendChild(p);
             });

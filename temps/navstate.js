@@ -23,6 +23,14 @@ window.navStateInit = function() {
         navState[1] = undefined;
         updateBreadcrumb();
         console.log('navState:', navState);
+        // 하위 nav2가 없거나 nav2에 p.nav-items가 없으면 breadcrumbToggle 자동 클릭
+        const nav2 = document.querySelector('.nav2[data-label="' + p.getAttribute('data-label') + '"]');
+        if (!nav2 || !nav2.querySelector('p.nav-items')) {
+          const breadcrumbToggle = document.querySelector('.breadcrumb .arrowtoggle');
+          if (breadcrumbToggle) {
+            breadcrumbToggle.click();
+          }
+        }
       }
     });
   }
