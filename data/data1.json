@@ -1,5 +1,7 @@
 {
     "title": "",
     "year": 2025,
-    "published": ""
+    "published": "",
+    "categories": ["blog"],
+    "tags": ["blog"]
 }

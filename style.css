@@ -1,3 +1,4 @@
+@import url(root.css);
 @import url(reset.css);
 
 body{
@@ -30,6 +31,7 @@ header{
     font-size: 1.5em;
     line-height:normal;
     border-bottom : #000000 1px solid;
+    background-color: var(--whiteblur);
     backdrop-filter: var(--blur);
 }
 /* ++++++++++++++++++++ */
@@ -38,6 +40,7 @@ header{
     height: 100%;
     border-bottom : #000000 1px solid;
     padding: var(--padding1);
+    background-color: var(--whiteblur);
     backdrop-filter: var(--blur);
 }
 #nav input[type='radio'] {display: none;}
@@ -50,10 +53,12 @@ header{
 #nav1-2:checked ~ .nav1-2{display: block;}
 #nav1-3:checked ~ .nav1-3{display: block;}
 #nav1-4:checked ~ .nav1-4{display: block;}  
+#nav1-5:checked ~ .nav1-5{display: block;}  
 #nav1-1:checked ~ .nav1 label[for="nav1-1"] p {background-color: var(--clr-a);}
 #nav1-2:checked ~ .nav1 label[for="nav1-2"] p {background-color: var(--clr-a);}
 #nav1-3:checked ~ .nav1 label[for="nav1-3"] p {background-color: var(--clr-a);}
 #nav1-4:checked ~ .nav1 label[for="nav1-4"] p {background-color: var(--clr-a);}
+#nav1-5:checked ~ .nav1 label[for="nav1-5"] p {background-color: var(--clr-a);}
 
 #nav1-1-1:checked ~ .nav2 label[for="nav1-1-1"] p {background-color: var(--clr-a);}
 #nav1-1-2:checked ~ .nav2 label[for="nav1-1-2"] p {background-color: var(--clr-a);}
@@ -128,7 +133,7 @@ header{
     #nav,
     .contents{
         width: 100%;
-        padding: 0 28px;
+        /* padding: 0 28px; */
     }
     header{
         /* padding-left: 30px; */

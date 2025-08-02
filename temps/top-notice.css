@@ -17,7 +17,7 @@
     flex-wrap: nowrap;
     width: 100%;
     /* transform: translateX(100%); */
-    animation: top-notice-scroll 10s linear infinite;
+    /* animation: top-notice-scroll 10s linear infinite; */
 }
 #top-notice:hover p {
     animation-play-state: paused;

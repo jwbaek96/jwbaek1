@@ -1,15 +1,3 @@
-:root{
-    --clr-bg : #ffffff;
-    --clr-txt : #000000;
-    --clr-a: #deff00;
-    --clr-hover: #deff00;
-    --clr-selected: #deff00;
-
-    --font : 'Indie Flower','gaegu',cursive;
-    --border :#000000 1px solid;
-    --padding1 : 0 70px;
-    --blur:blur(1.5px);
-}
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 a, a:visited, a:link, a:active {
 	color: #333;

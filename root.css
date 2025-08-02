@@ -1,0 +1,14 @@
+:root{
+    --clr-bg : #ffffff;
+    --clr-txt : #000000;
+    --clr-a: #deff00;
+    --clr-hover: #deff00;
+    --clr-selected: #deff00;
+
+    --font : 'Indie Flower','gaegu',cursive;
+    --border :#000000 1px solid;
+    /* --padding1 : 0 70px; */
+
+    --whiteblur: rgba(255, 255, 255, 0.5);
+    --blur:blur(2.5px);
+}
