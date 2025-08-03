@@ -54,8 +54,9 @@ window.navStateInit = function() {
 
 
 const breadcrumbToggle = document.querySelector('.breadcrumb .arrowtoggle');
-if (breadcrumbToggle) {
-  breadcrumbToggle.addEventListener('click', function() {
+const breadcrumb = document.querySelector('.breadcrumb');
+if (breadcrumb) {
+  breadcrumb.addEventListener('click', function() {
     // breadcrumb 영역과 텍스트 요소 선택
     const breadcrumb = document.querySelector('.breadcrumb');
     // const breadcrumbP = document.querySelector('.breadcrumb > p');
@@ -65,10 +66,10 @@ if (breadcrumbToggle) {
 
       breadcrumb.setAttribute('data-state', isOpen ? 'closed' : 'open');
 
-      breadcrumb.style.transform = isOpen ? 'translateY(0)' : 'translateY(100%)';
-      nav.style.transform = isOpen ? 'translateY(100%)' : 'translateY(0%)';
+      breadcrumb.style.transform = isOpen ? 'translateY(-101%)' : 'translateY(100%)';
+      nav.style.transform = isOpen ? 'translateY(100%)' : 'translateY(-101%)';
 
-      breadcrumbToggle.innerHTML = isOpen ? '<i class="fa-solid fa-arrow-down"></i>' : '<i class="fa-solid fa-arrow-up"></i>';
+      breadcrumbToggle.innerHTML = isOpen ? '<i class="fa-solid fa-arrow-up"></i>' : '<i class="fa-solid fa-arrow-down"></i>';
 
     }
   });
