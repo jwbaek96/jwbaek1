@@ -8,23 +8,26 @@
     transition: all 0.3s ease;
 }
 #identify {
+    overflow-y: scroll; scrollbar-width: none;
+    height: 100%;
     padding: 0 5px;
     background-color: var(--whiteblur);
     background-color: #fff;
     backdrop-filter: var(--blur);
     border: var(--border);
+    padding: 0 5px;
 }
 .identify-section {margin-bottom: 10px; border-bottom: 1px solid #eee; max-width: 500px;}
 .identify-section:last-of-type {border-bottom: none;}
 .identify-section-title {font-weight: 600;}
 .identify-section-content { padding: 5px 0; color: #333;}
 .identify-toggle{
+    z-index: 1;
     position: absolute;
     bottom: 0;
     right: 0;
-    transform: translate(1px,100%);
+    
     cursor: pointer;
-
     aspect-ratio: 1 / 1;
     --identify-toggle-size: 1rem;
     height: calc(var(--identify-toggle-size) + 0.5rem);
@@ -35,30 +38,38 @@
     align-items: center;
     justify-content: center;
     background: #000;
+    border: none;
+    animation: identify-toggle 0.8s ease forwards;
+}
+#identify-container[aria-expanded="true"] .identify-toggle {
+    animation: none;
+    transform: translate(1px,100%);
+}
+#identify-container[aria-expanded="false"] .identify-toggle {
+    animation: identify-toggle .65s ease-in-out forwards;
+    animation-delay: .5s;
+}
+@keyframes identify-toggle {
+    0% {transform: translate(1px,-1px);}
+    100% {transform: translate(1px,100%);}
 }
 .identify-toggle:hover {background: #333;}
 @media screen and (max-width: 530px) {
-    #identify{border: none;}
-    #identify-container {
-        position: fixed;
-        right: 0;
-        top: 0;
-        width: 100%;
-        transform: translateY(-100%);
-
-    }
+    #identify-container {position: fixed; right: 0; top: 0; width: 100%; transform: translateY(-100%);}
+    #identify{border: none; padding: 10px 15px;}
     #identify-container[aria-expanded="true"] {
         width: 100%;
         height: 100dvh;
         display: flex;align-items: center;justify-content: center;
         background-color: #fff;
     }
+    
+    #identify {width: 100%;}
     #identify-container[aria-expanded="true"] .identify-toggle {
-        transform: translate(0,0)
+        animation: none;
+        transform: translate(0);
     }
-    #identify {
-        width: 100%;
-    }
+
     .identify-section {max-width: none;}
     .identify-toggle {
         position: fixed;
