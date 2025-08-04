@@ -1,0 +1,117 @@
+{
+  "category": "web-development",
+  "title": "웹 개발",
+  "description": "프론트엔드 웹 개발 프로젝트들",
+  "projects": [
+    {
+      "id": "happy-new-year-2022",
+      "title": "Happy New Year",
+      "thumbnail": "https://via.placeholder.com/300x200/4CAF50/white?text=Happy+New+Year",
+      "images": [
+        "https://via.placeholder.com/600x400/4CAF50/white?text=Happy+New+Year+1",
+        "https://via.placeholder.com/600x400/2196F3/white?text=Happy+New+Year+2",
+        "https://via.placeholder.com/600x400/FF9800/white?text=Happy+New+Year+3"
+      ],
+      "description": "2022년 새해 축하 인터랙티브 웹페이지. CSS 애니메이션과 JavaScript로 구현된 새해 축하 효과들이 포함되어 있습니다. 파티클 애니메이션과 카운트다운 기능을 통해 사용자에게 즐거운 새해 경험을 제공합니다.",
+      "technologies": ["HTML", "CSS", "JavaScript", "CSS Animation"],
+      "date": "2022-01-01",
+      "status": "completed",
+      "links": {
+        "demo": "https://originalanswer.github.io/2022HappyNewYear/",
+        "github": "https://github.com/originalanswer/2022HappyNewYear"
+      },
+      "featured": true
+    },
+    {
+      "id": "analog-clock",
+      "title": "Analog Clock",
+      "thumbnail": "https://via.placeholder.com/300x200/2196F3/white?text=Analog+Clock",
+      "images": [
+        "https://via.placeholder.com/600x400/2196F3/white?text=Analog+Clock+1",
+        "https://via.placeholder.com/600x400/3F51B5/white?text=Analog+Clock+2"
+      ],
+      "description": "순수 CSS와 JavaScript로 구현한 아날로그 시계. 실시간으로 현재 시간을 표시하며, 시침, 분침, 초침이 정확하게 움직입니다. CSS transform을 활용한 부드러운 애니메이션이 특징입니다.",
+      "technologies": ["HTML", "CSS", "JavaScript", "Date API"],
+      "date": "2022-02-15",
+      "status": "completed",
+      "links": {
+        "demo": "https://originalanswer.github.io/2022Clock/",
+        "github": "https://github.com/originalanswer/2022Clock"
+      },
+      "featured": false
+    },
+    {
+      "id": "sun-moon-clock",
+      "title": "Sun & Moon Clock",
+      "thumbnail": "https://via.placeholder.com/300x200/FF9800/white?text=Sun+Moon",
+      "images": [
+        "https://via.placeholder.com/600x400/FF9800/white?text=Sun+Moon+1",
+        "https://via.placeholder.com/600x400/FFC107/white?text=Sun+Moon+2"
+      ],
+      "description": "해와 달의 움직임으로 시간을 표현하는 창의적인 시계. 낮과 밤의 개념을 시각적으로 구현하여 시간의 흐름을 자연스럽게 보여줍니다.",
+      "technologies": ["HTML", "CSS", "JavaScript", "SVG"],
+      "date": "2022-03-10",
+      "status": "completed",
+      "links": {
+        "demo": "https://originalanswer.github.io/2022TimeSunAndMoon/",
+        "github": "https://github.com/originalanswer/2022TimeSunAndMoon"
+      },
+      "featured": true
+    },
+    {
+      "id": "kakaotalk-clone",
+      "title": "KakaoTalk Clone",
+      "thumbnail": "https://via.placeholder.com/300x200/FEE500/black?text=KakaoTalk",
+      "images": [
+        "https://via.placeholder.com/600x400/FEE500/black?text=KakaoTalk+1",
+        "https://via.placeholder.com/600x400/F5F5F5/black?text=KakaoTalk+2",
+        "https://via.placeholder.com/600x400/333333/white?text=KakaoTalk+3"
+      ],
+      "description": "카카오톡 모바일 앱의 UI를 웹으로 클론 코딩한 프로젝트. 반응형 디자인과 모바일 최적화에 중점을 두었으며, 실제 앱과 유사한 사용자 경험을 제공합니다.",
+      "technologies": ["HTML", "CSS", "Responsive Design", "Mobile First"],
+      "date": "2021-12-20",
+      "status": "completed",
+      "links": {
+        "demo": "https://originalanswer.github.io/2021KakaoTalkClone/",
+        "github": "https://github.com/originalanswer/2021KakaoTalkClone"
+      },
+      "featured": true
+    },
+    {
+      "id": "calculator",
+      "title": "Calculator",
+      "thumbnail": "https://via.placeholder.com/300x200/9C27B0/white?text=Calculator",
+      "images": [
+        "https://via.placeholder.com/600x400/9C27B0/white?text=Calculator+1",
+        "https://via.placeholder.com/600x400/673AB7/white?text=Calculator+2"
+      ],
+      "description": "JavaScript로 구현한 계산기 애플리케이션. 기본적인 사칙연산부터 고급 수학 함수까지 지원하며, 키보드 입력도 가능합니다.",
+      "technologies": ["HTML", "CSS", "JavaScript", "Math API"],
+      "date": "2022-04-05",
+      "status": "completed",
+      "links": {
+        "demo": "https://originalanswer.github.io/2022Calculator/",
+        "github": "https://github.com/originalanswer/2022Calculator"
+      },
+      "featured": false
+    },
+    {
+      "id": "gradient-generator",
+      "title": "CSS Gradient Generator",
+      "thumbnail": "https://via.placeholder.com/300x200/E91E63/white?text=Gradient",
+      "images": [
+        "https://via.placeholder.com/600x400/E91E63/white?text=Gradient+1",
+        "https://via.placeholder.com/600x400/F44336/white?text=Gradient+2"
+      ],
+      "description": "CSS 그라디언트를 실시간으로 생성하고 미리볼 수 있는 도구. 색상 선택, 방향 조절, 코드 자동 생성 기능을 제공합니다.",
+      "technologies": ["HTML", "CSS", "JavaScript", "Color API"],
+      "date": "2022-05-20",
+      "status": "completed",
+      "links": {
+        "demo": "https://originalanswer.github.io/2022GradientGenerator/",
+        "github": "https://github.com/originalanswer/2022GradientGenerator"
+      },
+      "featured": false
+    }
+  ]
+}
