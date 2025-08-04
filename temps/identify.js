@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', function() {
         
         return text
             // **bold** -> <strong>bold</strong>
-            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+            .replace(/\*\*(.*?)\*\*/g, '<span style="font-weight:600">$1</span>')
             // \n -> <br>
             .replace(/\n/g, '<br>')
             // 연속된 공백 제거
