@@ -1,0 +1,109 @@
+/* 플로팅 위젯 공통 스타일 */
+
+/* 위젯 컨테이너 기본 스타일 */
+.floating-widget {
+    z-index: 1000;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    transition: transform 0.3s ease;
+}
+
+/* 위젯 내부 컨테이너 */
+.widget-content {
+    padding: 15px;
+    background-color: var(--whiteblur);
+    background-color: #fff;
+    backdrop-filter: var(--blur);
+    border: var(--border);
+}
+
+/* 위젯 토글 버튼 공통 스타일 */
+.widget-toggle {
+    position: absolute;
+    top: 0;
+    height: 2rem;
+    aspect-ratio: 1 / 1;
+    
+    background: #000; 
+    border: none;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    color: #fff; 
+    font-size: 1rem; 
+    cursor: pointer;
+
+    transform: translateY(-100%);
+}
+
+.widget-toggle:hover {
+    background: #333;
+}
+
+/* 위젯별 위치 조정 */
+.floating-widget.identify {
+    transform: translateY(100%);
+}
+
+.floating-widget.music {
+    transform: translateY(100%);
+    z-index: 999;
+}
+
+/* 토글 버튼 위치 */
+.floating-widget.identify .widget-toggle {
+    right: 0rem;
+}
+
+.floating-widget.music .widget-toggle {
+    right: 2rem;
+}
+
+/* 위젯 열림/닫힘 상태 */
+.floating-widget[aria-expanded="true"] {
+    transform: translateY(0) !important;
+}
+
+.floating-widget[aria-expanded="false"] {
+    transform: translateY(100%) !important;
+}
+
+/* 토글 나타나기 애니메이션 */
+@keyframes toggle-appear {
+    0% { bottom: -2rem; }
+    100% { bottom: 0; }
+}
+
+/* .floating-widget[aria-expanded="false"] {
+    animation: toggle-appear .65s ease-in-out forwards;
+    animation-delay: .5s;
+} */
+
+/* 모바일 반응형 */
+@media screen and (max-width: 530px) {
+    .floating-widget {
+        width: 100%;
+        border-top: var(--border);
+    }
+    
+    .widget-content {
+        width: 100%; 
+        padding: 10px 15px; 
+        border: none; 
+        max-width: none;
+    }
+
+    .floating-widget[aria-expanded="true"] {
+        width: 100%;
+        height: calc(100dvh - 2rem);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+    }
+    
+    .floating-widget[aria-expanded="true"] .widget-toggle {
+        animation: none;
+    }
+}

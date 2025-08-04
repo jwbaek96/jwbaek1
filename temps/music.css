@@ -1,0 +1,7 @@
+/* Music 위젯 전용 스타일 */
+#music-player {
+    width: 400px;
+    height: 300px;
+    max-width: 400px;
+    max-height: 300px;
+}

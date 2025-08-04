@@ -30,12 +30,13 @@ window.addEventListener('DOMContentLoaded', function() {
     function createIdentifyStructure(data) {
         // 토글 버튼 생성
         var identifyToggle = document.createElement('button');
-        identifyToggle.className = 'identify-toggle';
+        identifyToggle.className = 'widget-toggle';
         identifyToggle.innerHTML = '<i class="fa-solid fa-info"></i>';
         
         // identify 컨테이너 생성
         var identify = document.createElement('div');
         identify.id = 'identify';
+        identify.className = 'widget-content';
         
         // 섹션들 생성
         var sections = [
@@ -93,25 +94,44 @@ window.addEventListener('DOMContentLoaded', function() {
     }
 
     function setupToggleEvent() {
-        var identifyToggle = document.querySelector('.identify-toggle');
-        var identifyToggleIcon = document.querySelector('.identify-toggle i');
+        var identifyToggle = document.querySelector('#identify-container .widget-toggle');
+        var identifyToggleIcon = document.querySelector('#identify-container .widget-toggle i');
+        
+        // 위젯 매니저에 등록
+        if (window.WidgetManager) {
+            window.WidgetManager.registerWidget('identify', function(shouldOpen) {
+                isVisible = shouldOpen;
+                updateWidgetDisplay();
+            });
+        }
         
         if (identifyToggle) {
             identifyToggle.addEventListener('click', function() {
-                isVisible = !isVisible;
-                
-                if (isVisible) {
-                    identifyContainer.setAttribute('aria-expanded', 'true');
-                    identifyContainer.style.transform = 'translateY(0)';
-                    identifyToggleIcon.classList.remove('fa-info');
-                    identifyToggleIcon.classList.add('fa-arrow-up');
+                // 위젯 매니저를 통해 토글
+                if (window.WidgetManager) {
+                    window.WidgetManager.toggleWidget('identify');
                 } else {
-                    identifyContainer.setAttribute('aria-expanded', 'false');
-                    identifyContainer.style.transform = 'translateY(-100%)';
-                    identifyToggleIcon.classList.remove('fa-arrow-up');
-                    identifyToggleIcon.classList.add('fa-info');
+                    // 위젯 매니저가 없으면 기존 방식
+                    isVisible = !isVisible;
+                    updateWidgetDisplay();
                 }
             });
+        }
+        
+        function updateWidgetDisplay() {
+            if (isVisible) {
+                identifyContainer.setAttribute('aria-expanded', 'true');
+                identifyContainer.style.transform = 'translateY(0)';
+                identifyContainer.style.zIndex = '999';
+                identifyToggleIcon.classList.remove('fa-info');
+                identifyToggleIcon.classList.add('fa-arrow-down');
+            } else {
+                identifyContainer.setAttribute('aria-expanded', 'false');
+                identifyContainer.style.transform = 'translateY(100%)';
+                identifyContainer.style.zIndex = '1000';
+                identifyToggleIcon.classList.remove('fa-arrow-down');
+                identifyToggleIcon.classList.add('fa-info');
+            }
         }
     }
 });
