@@ -95,12 +95,8 @@ header h1 span{
 }
 .nav-items {padding: 0 5px;}
 .nav-items:hover {background-color: var(--clr-a);}
-
-.nav2{display: none;}
-
-/* 활성화된 nav item 스타일 */
 .nav-item-active {background-color: var(--clr-a);}
-/* JS-driven nav styles */
+.nav2{display: none;}
 
 /* ++++++++++++++++++++ */
 .contents {
@@ -121,12 +117,14 @@ header h1 span{
 .develope-22{display: none;}
 .blender-22{display: none;}
 .audio{display: none;}
+/* ++++++++++++++++++++ */
 
 
 
 
-
-
+/* ++++++++++++++++++++ */
+/* ++++++++++++++++++++ */
+/* ++++++++++++++++++++ */
 /* ++++++++++++++++++++ */
 @media screen and (max-width:530px) {
     /* body{
